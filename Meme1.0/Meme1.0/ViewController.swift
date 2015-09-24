@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+    
         topField.defaultTextAttributes = memeTextAttributes
         bottomField.defaultTextAttributes = memeTextAttributes
         topField.textAlignment = NSTextAlignment.Center
@@ -28,12 +28,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topField.text = "TOP"
         bottomField.text = "BOTTOM" 
         
+        
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
         topField.hidden = true
+        bottomField.hidden = true
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
     
@@ -51,7 +53,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-            topField.hidden = false
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imagePickerView.image = image
             
