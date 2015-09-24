@@ -82,8 +82,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
         NSStrokeColorAttributeName: UIColor.blackColor(),
         NSForegroundColorAttributeName: UIColor.whiteColor(),
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: 15.0
+        NSFontAttributeName: UIFont(name: "Didot", size: 30)!,
+        NSStrokeWidthAttributeName: -3.0
     
     ]
     

@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
                                 <rect key="frame" x="92" y="126" width="417" height="348"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-cm-doF">
@@ -37,25 +37,26 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-Rm-NEB">
-                                <rect key="frame" x="252" y="60" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-Rm-NEB">
+                                <rect key="frame" x="276" y="60" width="49" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-WW-0Ee">
-                                <rect key="frame" x="252" y="489" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="266" y="489" width="69" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.93055780359999996" blue="0.3214911057" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="gaa-cm-doF" secondAttribute="trailing" constant="-20" id="1my-al-wlH"/>
                             <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Iex-LL-ioF"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gaa-cm-doF" secondAttribute="bottom" constant="28" id="LuA-hC-4Zi"/>
-                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="NVf-6T-NXh"/>
+                            <constraint firstItem="3Sl-PY-1sA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="72" id="Mq2-V0-2Ix"/>
+                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="204" id="NVf-6T-NXh"/>
                             <constraint firstItem="gaa-cm-doF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="OEn-08-TIO"/>
-                            <constraint firstItem="hZB-Rm-NEB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="RyR-Uh-iVi"/>
+                            <constraint firstItem="hZB-Rm-NEB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-225" id="RyR-Uh-iVi"/>
                             <constraint firstItem="gaa-cm-doF" firstAttribute="top" secondItem="3Sl-PY-1sA" secondAttribute="bottom" constant="54" id="Tfp-Qz-Ucc"/>
                             <constraint firstItem="hZB-Rm-NEB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="igY-SE-wsG"/>
                             <constraint firstAttribute="centerX" secondItem="3Sl-PY-1sA" secondAttribute="centerX" constant="-0.5" id="nzh-zx-Nyw"/>
