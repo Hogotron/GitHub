@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomField: UITextField!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -26,11 +27,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomField.textAlignment = NSTextAlignment.Center
         topField.text = "TOP"
         bottomField.text = "BOTTOM" 
+        
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
+        topField.hidden = true
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
     
@@ -48,8 +51,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
+            topField.hidden = false
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imagePickerView.image = image
+            
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
