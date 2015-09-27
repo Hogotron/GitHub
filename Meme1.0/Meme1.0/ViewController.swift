@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         self.subscribeToKeyboardNotifications()
@@ -43,7 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(true)
+        super.viewWillDisappear(animated)
         
         self.unsubscribeFromKeyboardNotifications()
         
@@ -109,19 +109,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func subscribeToKeyboardNotifications() {
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:"    , name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func unsubscribeFromKeyboardNotifications() {
         
-        NSNotificationCenter.defaultCenter().removeObserver(self, name:
-            UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     
     }
        
     func keyboardWillShow(notification: NSNotification) {
         
         self.view.frame.origin.y -= getKeyboardHeight(notification)
+    
+    }
+        
+    func keyboardWillHide(notification: NSNotification) {
+            
+        self.view.frame.origin.y += getKeyboardHeight(notification)
+        
     
     }
     
@@ -132,18 +140,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.CGRectValue().height
     }
 
-    func hideKeyboardOnScreen() {
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
-    }
 
-    func keyboardWillHide(notification: NSNotification) {
-        
-        self.view.frame.origin.y += getKeyboardHeight(notification)
-    }
-
-
-
+    
 
 
 }
