@@ -31,6 +31,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topField.text = "TOP"
         bottomField.text = "BOTTOM" 
         
+        topField.delegate = self
+        bottomField.delegate = self
         
     }
 
@@ -110,7 +112,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func subscribeToKeyboardNotifications() {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func unsubscribeFromKeyboardNotifications() {
@@ -122,13 +124,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        
     func keyboardWillShow(notification: NSNotification) {
         
+        if bottomField.isFirstResponder() {
         self.view.frame.origin.y -= getKeyboardHeight(notification)
-    
+        
+        }
+        
     }
         
     func keyboardWillHide(notification: NSNotification) {
-            
+        
+        if bottomField.isFirstResponder() {
         self.view.frame.origin.y += getKeyboardHeight(notification)
+        
+        }
         
     
     }
@@ -140,7 +148,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.CGRectValue().height
     }
 
-
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
     
 
 
