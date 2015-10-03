@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
                                 <rect key="frame" x="92" y="126" width="417" height="348"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-cm-doF">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-cm-doF" propertyAccessControl="localizable">
                                 <rect key="frame" x="0.0" y="528" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Album" id="asV-wC-HsQ">

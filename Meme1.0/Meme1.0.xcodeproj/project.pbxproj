@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF0467B81BB8C58000C643A0 /* MemeModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0467B71BB8C58000C643A0 /* MemeModelObject.swift */; settings = {ASSET_TAGS = (); }; };
 		CFA898031B9FBCCC00CEA956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA898021B9FBCCC00CEA956 /* AppDelegate.swift */; };
 		CFA898051B9FBCCC00CEA956 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA898041B9FBCCC00CEA956 /* ViewController.swift */; };
 		CFA898081B9FBCCC00CEA956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA898061B9FBCCC00CEA956 /* Main.storyboard */; };
@@ -27,7 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF0467B71BB8C58000C643A0 /* MemeModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeModelObject.swift; sourceTree = "<group>"; };
 		CFA897FD1B9FBCCC00CEA956 /* Meme1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA898011B9FBCCC00CEA956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFA898021B9FBCCC00CEA956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			children = (
 				CFA898021B9FBCCC00CEA956 /* AppDelegate.swift */,
 				CFA898041B9FBCCC00CEA956 /* ViewController.swift */,
-				CF0467B71BB8C58000C643A0 /* MemeModelObject.swift */,
 				CFA898061B9FBCCC00CEA956 /* Main.storyboard */,
 				CFA898091B9FBCCC00CEA956 /* Images.xcassets */,
 				CFA8980B1B9FBCCC00CEA956 /* LaunchScreen.xib */,
@@ -218,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF0467B81BB8C58000C643A0 /* MemeModelObject.swift in Sources */,
 				CFA898051B9FBCCC00CEA956 /* ViewController.swift in Sources */,
 				CFA898031B9FBCCC00CEA956 /* AppDelegate.swift in Sources */,
 			);

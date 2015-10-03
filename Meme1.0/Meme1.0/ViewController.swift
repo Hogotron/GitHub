@@ -154,7 +154,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return true
     }
     
+    
+    struct Meme {
+        
+        var topTextField: String?
+        var bottomTextField: String?
+        var originalImage: UIImage?
+        let memedImage: UIImage!
+    }
+    
+    func save() {
+        
+        let meme = Meme(topTextField: topField, bottomTextField: bottomField, originalImage: imagePickerView, memedImage: generateMemedImage())
+    }
+
+    func generateMemedImage() -> UIImage {
+        
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return memedImage
+    }
+
+
+
+
+
 
 
 }
+
+
 
