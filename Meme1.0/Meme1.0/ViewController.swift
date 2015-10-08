@@ -42,7 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         self.subscribeToKeyboardNotifications()
         
-        //self.navigationController?.setToolbarHidden(true, animated: animated)
+        self.navigationController?.setToolbarHidden(true, animated: animated)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -177,6 +177,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
         
         return memedImage
+        
     }
 
 
