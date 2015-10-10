@@ -42,7 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         self.subscribeToKeyboardNotifications()
         
-        self.navigationController?.setToolbarHidden(true, animated: animated)
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         self.unsubscribeFromKeyboardNotifications()
         
-        self.navigationController?.setToolbarHidden(false, animated: animated)
+        
     }
     
     @IBAction func pickAnImage(sender: AnyObject) {
@@ -155,7 +155,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return true
     }
     
-    
+ 
     struct Meme {
         
         var topTextField: String?
