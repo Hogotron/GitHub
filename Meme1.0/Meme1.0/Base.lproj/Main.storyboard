@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJO-Ie-tSZ">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MEME-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Meme1_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,60 +18,85 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
-                                <rect key="frame" x="92" y="126" width="417" height="348"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="466"/>
                                 <animations/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-cm-doF" propertyAccessControl="localizable">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lSx-tD-a06">
                                 <rect key="frame" x="0.0" y="528" width="600" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yqa-6X-vgC">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <subviews>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-cm-doF" propertyAccessControl="localizable">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <animations/>
+                                                <items>
+                                                    <barButtonItem title="Album" id="asV-wC-HsQ">
+                                                        <connections>
+                                                            <action selector="pickAnImageFromAlbum:" destination="vXZ-lx-hvc" id="aQe-2Q-jJc"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JKW-kU-QBN"/>
+                                                    <barButtonItem style="plain" systemItem="camera" id="lJZ-XD-hfR">
+                                                        <connections>
+                                                            <action selector="pickAnImageFromCamera:" destination="vXZ-lx-hvc" id="h5h-Zn-ObM"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                            </toolbar>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
                                 <animations/>
-                                <items>
-                                    <barButtonItem title="Album" id="asV-wC-HsQ">
-                                        <connections>
-                                            <action selector="pickAnImageFromAlbum:" destination="vXZ-lx-hvc" id="aQe-2Q-jJc"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JKW-kU-QBN"/>
-                                    <barButtonItem style="plain" systemItem="camera" id="lJZ-XD-hfR">
-                                        <connections>
-                                            <action selector="pickAnImageFromCamera:" destination="vXZ-lx-hvc" id="h5h-Zn-ObM"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-WW-0Ee">
-                                <rect key="frame" x="266" y="489" width="69" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-Rm-NEB">
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-Rm-NEB">
                                 <rect key="frame" x="276" y="80" width="49" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-WW-0Ee">
+                                <rect key="frame" x="266" y="463" width="69" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="BQt-xN-TMw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.93055780359999996" blue="0.3214911057" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gaa-cm-doF" secondAttribute="trailing" constant="-20" id="1my-al-wlH"/>
-                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Iex-LL-ioF"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gaa-cm-doF" secondAttribute="bottom" constant="28" id="LuA-hC-4Zi"/>
-                            <constraint firstItem="3Sl-PY-1sA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="72" id="Mq2-V0-2Ix"/>
-                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="204" id="NVf-6T-NXh"/>
-                            <constraint firstItem="gaa-cm-doF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="OEn-08-TIO"/>
-                            <constraint firstItem="hZB-Rm-NEB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-225" id="RyR-Uh-iVi"/>
-                            <constraint firstItem="gaa-cm-doF" firstAttribute="top" secondItem="3Sl-PY-1sA" secondAttribute="bottom" constant="54" id="Tfp-Qz-Ucc"/>
+                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerX" secondItem="3Sl-PY-1sA" secondAttribute="centerX" id="F08-2M-Wy0"/>
+                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="top" secondItem="3Sl-PY-1sA" secondAttribute="bottom" constant="-67" id="H0R-qz-zca"/>
+                            <constraint firstItem="3Sl-PY-1sA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="Mq2-V0-2Ix"/>
+                            <constraint firstItem="lSx-tD-a06" firstAttribute="top" secondItem="n7Q-WW-0Ee" secondAttribute="bottom" constant="35" id="Qm3-qI-cXq"/>
+                            <constraint firstItem="hZB-Rm-NEB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-205" id="RyR-Uh-iVi"/>
+                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="top" secondItem="3Sl-PY-1sA" secondAttribute="bottom" constant="-41" id="bcb-NB-Dik"/>
+                            <constraint firstAttribute="bottom" secondItem="n7Q-WW-0Ee" secondAttribute="bottom" constant="107" id="fOT-Xk-ZCf"/>
+                            <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerX" secondItem="lSx-tD-a06" secondAttribute="centerX" id="htB-Pf-SUp"/>
                             <constraint firstItem="hZB-Rm-NEB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="igY-SE-wsG"/>
+                            <constraint firstItem="3Sl-PY-1sA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ngo-Se-gYi"/>
                             <constraint firstAttribute="centerX" secondItem="3Sl-PY-1sA" secondAttribute="centerX" constant="-0.5" id="nzh-zx-Nyw"/>
-                            <constraint firstAttribute="centerY" secondItem="3Sl-PY-1sA" secondAttribute="centerY" id="viZ-NF-wYD"/>
+                            <constraint firstItem="lSx-tD-a06" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="rW9-qd-5f8"/>
+                            <constraint firstAttribute="centerY" secondItem="3Sl-PY-1sA" secondAttribute="centerY" constant="3" id="viZ-NF-wYD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="H0R-qz-zca"/>
+                                <exclude reference="bcb-NB-Dik"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="17n-Jk-ywi"/>
+                    <navigationItem key="navigationItem" title="MEME" id="17n-Jk-ywi"/>
                     <connections>
                         <outlet property="bottomField" destination="n7Q-WW-0Ee" id="l6d-dP-TgF"/>
                         <outlet property="cameraButton" destination="lJZ-XD-hfR" id="HeO-gn-Rhc"/>
                         <outlet property="imagePickerView" destination="3Sl-PY-1sA" id="fQu-B4-eRY"/>
+                        <outlet property="navBar" destination="17n-Jk-ywi" id="oIQ-cz-pIN"/>
+                        <outlet property="toolBar" destination="gaa-cm-doF" id="RI2-Fk-yiE"/>
                         <outlet property="topField" destination="hZB-Rm-NEB" id="QHM-3n-8mL"/>
                     </connections>
                 </viewController>

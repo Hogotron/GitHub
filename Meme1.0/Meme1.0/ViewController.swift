@@ -11,16 +11,18 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
   
     
+   
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topField: UITextField!
     @IBOutlet weak var bottomField: UITextField!
+    @IBOutlet weak var toolBar: UIToolbar!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         topField.hidden = true
         bottomField.hidden = true
         
@@ -61,8 +63,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.presentViewController(imagePicker, animated: true, completion: nil)
         
         
-        
-    
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -75,6 +75,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         topField.hidden = false
         bottomField.hidden = false
+        
     }
 
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -171,10 +172,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func generateMemedImage() -> UIImage {
         
+        self.toolBar.hidden = true
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
         
         return memedImage
         
