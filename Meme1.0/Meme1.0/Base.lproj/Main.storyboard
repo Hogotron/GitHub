@@ -56,7 +56,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-WW-0Ee">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7Q-WW-0Ee">
                                 <rect key="frame" x="266" y="463" width="69" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -90,12 +90,18 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="MEME" id="17n-Jk-ywi"/>
+                    <navigationItem key="navigationItem" title="MEME" id="17n-Jk-ywi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="3lw-P6-kmG">
+                            <connections>
+                                <action selector="savingMyImage:" destination="vXZ-lx-hvc" id="xfm-T5-1Ee"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomField" destination="n7Q-WW-0Ee" id="l6d-dP-TgF"/>
                         <outlet property="cameraButton" destination="lJZ-XD-hfR" id="HeO-gn-Rhc"/>
                         <outlet property="imagePickerView" destination="3Sl-PY-1sA" id="fQu-B4-eRY"/>
-                        <outlet property="navBar" destination="17n-Jk-ywi" id="oIQ-cz-pIN"/>
+                        <outlet property="saveImage" destination="3lw-P6-kmG" id="6RU-kf-UM3"/>
                         <outlet property="toolBar" destination="gaa-cm-doF" id="RI2-Fk-yiE"/>
                         <outlet property="topField" destination="hZB-Rm-NEB" id="QHM-3n-8mL"/>
                     </connections>

@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topField: UITextField!
+    @IBOutlet weak var saveImage: UIBarButtonItem!
     @IBOutlet weak var bottomField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
     
@@ -64,7 +65,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
     }
+    @IBAction func savingMyImage(sender: AnyObject) {
     
+        let image = UIImage()
+        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.presentViewController(controller, animated: true, completion: nil)
+        save()
+        
+    }
+        
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -168,6 +177,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func save() {
         
         _ = Meme(topTextField: topField.text, bottomTextField: bottomField.text, originalImage: imagePickerView.image, memedImage: generateMemedImage())
+        
     }
 
     func generateMemedImage() -> UIImage {
