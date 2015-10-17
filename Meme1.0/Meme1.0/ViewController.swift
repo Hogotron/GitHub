@@ -78,7 +78,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
-        save()
         
         
     }
@@ -146,9 +145,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if bottomField.isFirstResponder() {
         self.view.frame.origin.y -= getKeyboardHeight(notification)
-        
+            
         }
         
+        if topField.isFirstResponder() {
+            self.view.frame.origin.y -= getKeyboardHeight(notification)
+        }
     }
         
     func keyboardWillHide(notification: NSNotification) {
@@ -186,15 +188,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func save() {
         
         _ = Meme(topTextField: topField.text, bottomTextField: bottomField.text, originalImage: imagePickerView.image, memedImage: generateMemedImage())
-        self.toolBar.hidden = true
+        //self.toolBar.hidden = true
         
         
     }
 
     func generateMemedImage() -> UIImage {
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        self.view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
