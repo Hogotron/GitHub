@@ -70,7 +70,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let image = UIImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         self.presentViewController(controller, animated: true, completion: nil)
+        
         save()
+        
         
     }
         
@@ -177,12 +179,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func save() {
         
         _ = Meme(topTextField: topField.text, bottomTextField: bottomField.text, originalImage: imagePickerView.image, memedImage: generateMemedImage())
+        self.toolBar.hidden = true
+        
         
     }
 
     func generateMemedImage() -> UIImage {
         
-        self.toolBar.hidden = true
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
