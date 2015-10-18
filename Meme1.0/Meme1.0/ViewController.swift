@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         topField.delegate = self
         bottomField.delegate = self
-        
+        saveImage.enabled = UIActivityViewController.isAccessibilityElement()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -45,6 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         self.subscribeToKeyboardNotifications()
         
+
         
     }
     
@@ -148,9 +149,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
         }
         
-        if topField.isFirstResponder() {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
-        }
+        
     }
         
     func keyboardWillHide(notification: NSNotification) {
