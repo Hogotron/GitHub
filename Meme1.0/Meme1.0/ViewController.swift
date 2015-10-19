@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         topField.delegate = self
         bottomField.delegate = self
-        saveImage.enabled = UIActivityViewController.isAccessibilityElement()
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         self.subscribeToKeyboardNotifications()
-        
+        saveImage.enabled = false
 
         
     }
@@ -68,6 +68,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     @IBAction func savingMyImage(sender: AnyObject) {
     
+        saveImage.enabled = false
         let image = UIImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         self.presentViewController(controller, animated: true, completion: nil)
