@@ -43,16 +43,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        self.subscribeToKeyboardNotifications()
-        saveImage.enabled = false
-
+        subscribeToKeyboardNotifications()
         
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
         
         
     }
@@ -62,17 +60,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        presentViewController(imagePicker, animated: true, completion: nil)
         
         
     }
     @IBAction func savingMyImage(sender: AnyObject) {
     
-        saveImage.enabled = false
         let image = UIImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        self.presentViewController(controller, animated: true, completion: nil)
-        
+        presentViewController(controller, animated: true, completion: nil)
+
         controller.completionWithItemsHandler = {
             (activity: String?, completed: Bool, items: [AnyObject]?, error: NSError?) -> Void in
             if completed {
@@ -87,9 +84,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imagePickerView.image = image
+            imagePickerView.image = image
             
-            self.dismissViewControllerAnimated(true, completion: nil)
+            dismissViewControllerAnimated(true, completion: nil)
         
         }
         topField.hidden = false
@@ -99,7 +96,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func pickAnImageFromAlbum (sender: AnyObject) {
@@ -107,7 +104,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        presentViewController(imagePicker, animated: true, completion: nil)
         
     }
    
@@ -117,7 +114,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
        
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
    let memeTextAttributes = [
@@ -146,7 +143,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func keyboardWillShow(notification: NSNotification) {
         
         if bottomField.isFirstResponder() {
-        self.view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y -= getKeyboardHeight(notification)
             
         }
         
@@ -155,8 +152,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     func keyboardWillHide(notification: NSNotification) {
         
-        if bottomField.isFirstResponder() {
-        self.view.frame.origin.y = 0
+        if bottomField.isFirstResponder(){
+            view.frame.origin.y += getKeyboardHeight(notification)
         
         }
         
@@ -188,7 +185,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func save() {
         
         _ = Meme(topTextField: topField.text, bottomTextField: bottomField.text, originalImage: imagePickerView.image, memedImage: generateMemedImage())
-        //self.toolBar.hidden = true
+        
         
         
     }
@@ -196,7 +193,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func generateMemedImage() -> UIImage {
         
         UIGraphicsBeginImageContext(view.frame.size)
-        self.view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
