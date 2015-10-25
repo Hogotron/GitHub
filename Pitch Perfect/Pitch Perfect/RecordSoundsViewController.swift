@@ -48,7 +48,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         } catch _ {
         }
         
-        audioRecorder = try? AVAudioRecorder(URL: filePath, settings: nil)
+        audioRecorder = try AVAudioRecorder(URL: filePath!, settings: nil)
         audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
