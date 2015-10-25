@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
     
-    
+    var memeImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,10 +64,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
     }
+
+        
     @IBAction func savingMyImage(sender: AnyObject) {
     
-        let image = UIImage()
-        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        let memeImage = generateMemedImage()
+        let controller = UIActivityViewController(activityItems: [memeImage], applicationActivities: nil)
         presentViewController(controller, animated: true, completion: nil)
 
         controller.completionWithItemsHandler = {
