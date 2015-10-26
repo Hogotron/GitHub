@@ -32,26 +32,31 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func PlaySlowButton(sender: UIButton) {
+        
         PlayBothFastAndSlow(0.5)
         
     }
     
     @IBAction func PlayFastButton(sender: UIButton) {
+        
         PlayBothFastAndSlow(2.0)
         
     }
     
     @IBAction func stopAudio(sender: UIButton) {
+        
         stopAllAudio()
     }
     
     @IBAction func PlayChipmunkAudio(sender: UIButton) {
+        
         playAudioWithVariablePitch(1000)
         
         
     }
    
     func playAudioWithVariablePitch(pitch: Float){
+        
         audioEngine.reset()
         stopAllAudio()
         
@@ -75,10 +80,12 @@ class PlaySoundsViewController: UIViewController {
 }
 
     @IBAction func PlayDarthVaderAudio(sender: UIButton) {
+        
         playAudioWithVariablePitch(-1000)
     }
 
     func PlayBothFastAndSlow(rates: Float) {
+        
         stopAllAudio()
         audioPlayer.play()
         audioPlayer.currentTime = 0
@@ -88,6 +95,7 @@ class PlaySoundsViewController: UIViewController {
         }
 
     func stopAllAudio() {
+        
         audioPlayer.stop()
         audioEngine.stop()
     }
