@@ -70,7 +70,7 @@
                             </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.93055780359999996" blue="0.3214911057" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1196459532" green="0.52286537249999998" blue="0.21264002169999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hZB-Rm-NEB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="54" id="0aG-jA-jUf"/>
                             <constraint firstItem="n7Q-WW-0Ee" firstAttribute="centerX" secondItem="3Sl-PY-1sA" secondAttribute="centerX" id="F08-2M-Wy0"/>
@@ -102,14 +102,6 @@
                             <connections>
                                 <action selector="savingMyImage:" destination="vXZ-lx-hvc" id="xfm-T5-1Ee"/>
                             </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Gmv-TY-Lk1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QbD-xS-766">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="Cancel"/>
-                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
