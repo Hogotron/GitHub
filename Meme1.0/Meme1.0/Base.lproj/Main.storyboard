@@ -24,11 +24,11 @@
             </objects>
             <point key="canvasLocation" x="2194" y="-108"/>
         </scene>
-        <!--Collection View-->
+        <!--Collection-->
         <scene sceneID="xqM-iS-kwY">
             <objects>
                 <navigationController id="Nzk-JB-f5z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection View" id="y7C-c9-Rdx"/>
+                    <tabBarItem key="tabBarItem" title="Collection" id="y7C-c9-Rdx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WjV-70-Ybh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -83,7 +83,7 @@
                     <navigationItem key="navigationItem" id="deX-Em-a85">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ooP-f1-afQ">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="presentation" id="nzz-ml-c0U"/>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="PGd-w2-3Jb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -107,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
                                 <rect key="frame" x="0.0" y="64" width="600" height="466"/>
                                 <animations/>
                             </imageView>
@@ -207,11 +207,11 @@
             </objects>
             <point key="canvasLocation" x="4444" y="-84"/>
         </scene>
-        <!--Table View-->
+        <!--Table-->
         <scene sceneID="5Ug-gT-cSD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZJO-Ie-tSZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table View" id="EC1-sY-6Wn"/>
+                    <tabBarItem key="tabBarItem" title="Table" id="EC1-sY-6Wn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0rg-dQ-Txv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -272,7 +272,7 @@
                     <navigationItem key="navigationItem" id="A93-TK-NlQ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="RUL-0r-0af">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="presentation" id="faY-wp-tP3"/>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="xrZ-8N-V3w"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -283,6 +283,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nzz-ml-c0U"/>
+        <segue reference="xrZ-8N-V3w"/>
     </inferredMetricsTieBreakers>
 </document>
