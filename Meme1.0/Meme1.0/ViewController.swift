@@ -45,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         subscribeToKeyboardNotifications()
-        
+        tabBarController?.tabBar.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -184,8 +184,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
+        toolBar.hidden = true
         
-    
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
     }
 
     func generateMemedImage() -> UIImage {
@@ -200,7 +202,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     
-
+    
 
 
 }
