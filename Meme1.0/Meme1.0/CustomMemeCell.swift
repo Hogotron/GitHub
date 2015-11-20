@@ -12,6 +12,12 @@ import UIKit
 class CustomMemeCell: UICollectionViewCell {
     
     
+    @IBOutlet weak var memeImageView: UIImageView!
     
-    
+    func setCellImage(image: UIImage) {
+        
+        memeImageView.image = image
+        
+    }
+
 }

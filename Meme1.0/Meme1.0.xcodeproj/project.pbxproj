@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF7831391BFFA38300F1E4D8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7831381BFFA38300F1E4D8 /* DetailViewController.swift */; };
 		CF904E6E1BE3E2CE009EFC39 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF904E6D1BE3E2CE009EFC39 /* Meme.swift */; };
 		CFA898031B9FBCCC00CEA956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA898021B9FBCCC00CEA956 /* AppDelegate.swift */; };
 		CFA898051B9FBCCC00CEA956 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA898041B9FBCCC00CEA956 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF7831381BFFA38300F1E4D8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CF904E6D1BE3E2CE009EFC39 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		CFA897FD1B9FBCCC00CEA956 /* Meme1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA898011B9FBCCC00CEA956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				CFF175001BE84445007B8CA6 /* CollectionViewController.swift */,
 				CFEC9D371BF949AF007200C1 /* CustomMemeCell.swift */,
 				CFBB12861BF00375008D6F2D /* TableViewController.swift */,
+				CF7831381BFFA38300F1E4D8 /* DetailViewController.swift */,
 				CF904E6D1BE3E2CE009EFC39 /* Meme.swift */,
 				CFA898061B9FBCCC00CEA956 /* Main.storyboard */,
 				CFA898091B9FBCCC00CEA956 /* Images.xcassets */,
@@ -231,6 +234,7 @@
 				CF904E6E1BE3E2CE009EFC39 /* Meme.swift in Sources */,
 				CFEC9D381BF949AF007200C1 /* CustomMemeCell.swift in Sources */,
 				CFA898051B9FBCCC00CEA956 /* ViewController.swift in Sources */,
+				CF7831391BFFA38300F1E4D8 /* DetailViewController.swift in Sources */,
 				CFBB12871BF00375008D6F2D /* TableViewController.swift in Sources */,
 				CFA898031B9FBCCC00CEA956 /* AppDelegate.swift in Sources */,
 			);

@@ -19,8 +19,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
     
-    var memeImage: UIImage!
-    var memes: [Meme]!
+    
+    var memeToEdit : Meme!
+    var memeToEditIndex : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,43 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topField.delegate = self
         bottomField.delegate = self
         
+        if memeToEdit == nil {
+            
+            configureTextField(topField,
+                text: "TOP",
+                delegate: self,
+                attributes: memeTextAttributes,
+                alignment: .Center)
+            
+            configureTextField(bottomField,
+                text: "BOTTOM",
+                delegate: self,
+                attributes: memeTextAttributes,
+                alignment: .Center)
+            
+            activateButtons()
+            
+        } else {
+            
+            
+            configureTextField(topField,
+                text: memeToEdit.topTextField!,
+                delegate: self,
+                attributes: memeTextAttributes,
+                alignment: .Center)
+            
+            configureTextField(bottomField,
+                text: memeToEdit.bottomTextField!,
+                delegate: self,
+                attributes: memeTextAttributes,
+                alignment: .Center)
+            
+            imagePickerView.image = memeToEdit.originalImage
+            
+            activateButtons()
+        }
+
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -53,7 +91,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         unsubscribeFromKeyboardNotifications()
         
+        }
+    
+    func deactivateButtons() {
         
+        saveImage.enabled = false
+    }
+    
+    func activateButtons() {
+        
+        saveImage.enabled = true
     }
     
     @IBAction func pickAnImage(sender: AnyObject) {
@@ -63,7 +110,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
         
+        }
+
+    // delete old meme
+    func deleteOldMeme() {
         
+        (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(memeToEditIndex)
     }
 
         
@@ -79,11 +131,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.save()
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
+            
+            if self.memeToEdit != nil {
+                
+                self.deleteOldMeme()
+                
+            }
+            
+            
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
         
-        
     }
-        
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -92,6 +152,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             dismissViewControllerAnimated(true, completion: nil)
         
         }
+        
         topField.hidden = false
         bottomField.hidden = false
         
@@ -129,6 +190,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     ]
     
+    func configureTextField(textField: UITextField, text: String, delegate: UITextFieldDelegate,
+        attributes: [String : NSObject], alignment: NSTextAlignment) {
+            
+            textField.text = text
+            textField.delegate = delegate
+            textField.defaultTextAttributes = attributes
+            textField.textAlignment = alignment
+    }
+
     
     func subscribeToKeyboardNotifications() {
         
