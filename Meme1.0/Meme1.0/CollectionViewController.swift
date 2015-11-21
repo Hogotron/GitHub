@@ -43,18 +43,34 @@ class CollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomMemeCell", forIndexPath: indexPath) as! CustomMemeCell
-        _ = memes[indexPath.item]
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("memeCollectionCell", forIndexPath: indexPath) as! CustomMemeCell
+        let meme = memes[indexPath.item]
+        
+        cell.setCellImage(meme.memedImage)
         
         return cell
     }
 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        // instantiate view MemeDetailViewController
+        let detailController = storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
+        // retrieve different meme for different items
+        let meme = memes[indexPath.row]
+        
+        // pass meme and its index to view controller
+        detailController.meme = meme
+        detailController.memeIndex = indexPath.row
+        
+        // display view controller
+        navigationController?.pushViewController(detailController, animated: true)
     }
 
-
-
-
+        
+    
 }
+
+
+
+

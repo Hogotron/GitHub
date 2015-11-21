@@ -85,7 +85,7 @@
                     <navigationItem key="navigationItem" id="deX-Em-a85">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ooP-f1-afQ">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" id="PGd-w2-3Jb"/>
+                                <segue destination="vXZ-lx-hvc" kind="presentation" id="2Q9-W9-MO9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -203,6 +203,7 @@
                         <outlet property="saveImage" destination="3lw-P6-kmG" id="6RU-kf-UM3"/>
                         <outlet property="toolBar" destination="gaa-cm-doF" id="RI2-Fk-yiE"/>
                         <outlet property="topField" destination="hZB-Rm-NEB" id="QHM-3n-8mL"/>
+                        <segue destination="b3U-X3-OIW" kind="presentation" id="azu-lf-Urh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -303,7 +304,7 @@
                     <navigationItem key="navigationItem" id="A93-TK-NlQ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="RUL-0r-0af">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" id="xrZ-8N-V3w"/>
+                                <segue destination="vXZ-lx-hvc" kind="presentation" id="XXx-qq-Itj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -314,6 +315,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PGd-w2-3Jb"/>
+        <segue reference="2Q9-W9-MO9"/>
     </inferredMetricsTieBreakers>
 </document>
