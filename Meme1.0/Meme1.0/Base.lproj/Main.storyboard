@@ -9,6 +9,7 @@
         <scene sceneID="4cS-Ie-w1D">
             <objects>
                 <tabBarController id="b3U-X3-OIW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="B5u-ta-dpL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="LeQ-hc-Lqu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -109,7 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Sl-PY-1sA">
                                 <rect key="frame" x="0.0" y="64" width="600" height="466"/>
                                 <animations/>
                             </imageView>
@@ -149,7 +150,7 @@
                                     <constraint firstAttribute="width" constant="150" id="BQt-xN-TMw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-Rm-NEB">
                                 <rect key="frame" x="226" y="118" width="150" height="30"/>
@@ -158,7 +159,7 @@
                                     <constraint firstAttribute="width" constant="150" id="eFo-le-aZ9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <animations/>
@@ -203,7 +204,7 @@
                         <outlet property="saveImage" destination="3lw-P6-kmG" id="6RU-kf-UM3"/>
                         <outlet property="toolBar" destination="gaa-cm-doF" id="RI2-Fk-yiE"/>
                         <outlet property="topField" destination="hZB-Rm-NEB" id="QHM-3n-8mL"/>
-                        <segue destination="b3U-X3-OIW" kind="presentation" id="azu-lf-Urh"/>
+                        <segue destination="b3U-X3-OIW" kind="push" id="5oE-Zv-3ox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -262,7 +263,7 @@
         <!--Table View Controller-->
         <scene sceneID="vgu-zM-qFi">
             <objects>
-                <tableViewController id="Ac0-cs-AtU" sceneMemberID="viewController">
+                <tableViewController id="Ac0-cs-AtU" customClass="TableViewController" customModule="Meme1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CD1-D9-1pV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,6 +316,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8XA-v5-ycg"/>
+        <segue reference="ZpM-zV-zM1"/>
     </inferredMetricsTieBreakers>
 </document>
