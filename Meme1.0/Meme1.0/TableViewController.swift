@@ -40,9 +40,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
         let detailController = storyboard!.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
-        
         _ = memes[indexPath.row]
         
         navigationController!.pushViewController(detailController, animated: true)
