@@ -44,6 +44,17 @@ class DetailViewController: UIViewController {
         navigationController?.toolbar.layer.position.y = (navigationController?.toolbar.layer.position.y)! + (tabBarController?.tabBar.bounds.height)!
         }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // show tab bar
+        tabBarController?.tabBar.hidden = false
+        
+        // hide meme detail controller toolbar
+        navigationController?.setToolbarHidden(true, animated: false)
+        
+    }
+
     
     @IBAction func editMeme(sender: UIBarButtonItem) {
         

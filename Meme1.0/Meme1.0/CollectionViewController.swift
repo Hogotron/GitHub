@@ -20,7 +20,6 @@ class CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
         let space: CGFloat = 1.0
         let dimension = (view.frame.size.width - 2 * space) / 3.0
         flowLayOut.minimumLineSpacing = space
@@ -33,6 +32,7 @@ class CollectionViewController: UICollectionViewController {
         super.viewWillAppear(animated)
         
         collectionView!.reloadData()
+        tabBarController?.tabBar.hidden = false
         
     }
     

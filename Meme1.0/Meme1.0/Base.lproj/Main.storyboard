@@ -29,7 +29,7 @@
         <scene sceneID="xqM-iS-kwY">
             <objects>
                 <navigationController id="Nzk-JB-f5z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="y7C-c9-Rdx"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="Collection" id="y7C-c9-Rdx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WjV-70-Ybh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -84,7 +84,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="deX-Em-a85">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ooP-f1-afQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ooP-f1-afQ">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="show" id="8XA-v5-ycg"/>
                             </connections>
@@ -150,7 +150,7 @@
                                     <constraint firstAttribute="width" constant="150" id="BQt-xN-TMw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-Rm-NEB">
                                 <rect key="frame" x="226" y="118" width="150" height="30"/>
@@ -159,7 +159,7 @@
                                     <constraint firstAttribute="width" constant="150" id="eFo-le-aZ9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <animations/>
@@ -204,7 +204,7 @@
                         <outlet property="saveImage" destination="3lw-P6-kmG" id="6RU-kf-UM3"/>
                         <outlet property="toolBar" destination="gaa-cm-doF" id="RI2-Fk-yiE"/>
                         <outlet property="topField" destination="hZB-Rm-NEB" id="QHM-3n-8mL"/>
-                        <segue destination="b3U-X3-OIW" kind="push" id="5oE-Zv-3ox"/>
+                        <segue destination="b3U-X3-OIW" kind="push" id="exQ-jt-EV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -223,13 +223,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFO-MQ-dw9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TFO-MQ-dw9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TFO-MQ-dw9" firstAttribute="top" secondItem="faD-MC-bZo" secondAttribute="topMargin" id="A1x-pT-a7M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TFO-MQ-dw9" secondAttribute="trailing" constant="-20" id="OLk-7P-nrk"/>
+                            <constraint firstItem="TFO-MQ-dw9" firstAttribute="leading" secondItem="faD-MC-bZo" secondAttribute="leadingMargin" constant="-20" id="Sjf-RY-ry4"/>
+                            <constraint firstItem="tNn-vR-h8y" firstAttribute="top" secondItem="TFO-MQ-dw9" secondAttribute="bottom" id="UqT-SG-nbE"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="TFO-MQ-dw9" id="6dF-85-e8y"/>
@@ -244,7 +250,7 @@
         <scene sceneID="5Ug-gT-cSD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZJO-Ie-tSZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="EC1-sY-6Wn"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="Table" id="EC1-sY-6Wn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0rg-dQ-Txv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -303,7 +309,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="A93-TK-NlQ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="RUL-0r-0af">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RUL-0r-0af">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="show" id="ZpM-zV-zM1"/>
                             </connections>
@@ -315,6 +321,10 @@
             <point key="canvasLocation" x="3673" y="300"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Collection" width="30" height="30"/>
+        <image name="Table" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZpM-zV-zM1"/>
     </inferredMetricsTieBreakers>

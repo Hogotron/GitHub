@@ -57,7 +57,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
         } else {
             
-            
             configureTextField(topField,
                 text: memeToEdit.topTextField!,
                 delegate: self,
@@ -75,6 +74,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             activateButtons()
         }
 
+        topField.delegate = self
+        bottomField.delegate = self
         
     }
 
@@ -137,7 +138,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.deleteOldMeme()
                 
             }
-            
             
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
