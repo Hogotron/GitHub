@@ -65,7 +65,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="209" height="183"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRd-FN-gdX" userLabel="Meme Image View">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="memeCollectionCell" translatesAutoresizingMaskIntoConstraints="NO" id="cRd-FN-gdX" userLabel="Meme Image View">
                                             <rect key="frame" x="0.0" y="8" width="209" height="175"/>
                                             <animations/>
                                         </imageView>
@@ -203,7 +203,7 @@
                                 <animations/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="b3U-X3-OIW" kind="show" id="mzu-WE-XON"/>
+                                    <segue destination="b3U-X3-OIW" kind="presentation" id="ZSE-7B-xPu"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -211,6 +211,7 @@
                     <connections>
                         <outlet property="bottomField" destination="n7Q-WW-0Ee" id="l6d-dP-TgF"/>
                         <outlet property="cameraButton" destination="lJZ-XD-hfR" id="HeO-gn-Rhc"/>
+                        <outlet property="cancelButton" destination="2qi-4l-rmz" id="Yew-gt-hBU"/>
                         <outlet property="imagePickerView" destination="3Sl-PY-1sA" id="fQu-B4-eRY"/>
                         <outlet property="saveImage" destination="3lw-P6-kmG" id="6RU-kf-UM3"/>
                         <outlet property="toolBar" destination="gaa-cm-doF" id="RI2-Fk-yiE"/>
@@ -225,7 +226,7 @@
         <!--Detail View Controller-->
         <scene sceneID="ZHd-bx-cLY">
             <objects>
-                <viewController id="zsL-a3-PNW" customClass="DetailViewController" customModule="Meme1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="zsL-a3-PNW" customClass="DetailViewController" customModule="Meme1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eky-RK-wTB"/>
                         <viewControllerLayoutGuide type="bottom" id="tNn-vR-h8y"/>
@@ -321,7 +322,7 @@
         <image name="Table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mzu-WE-XON"/>
-        <segue reference="ZpM-zV-zM1"/>
+        <segue reference="cCf-A6-Jco"/>
+        <segue reference="8XA-v5-ycg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var saveImage: UIBarButtonItem!
     @IBOutlet weak var bottomField: UITextField!
     @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     
     var memeToEdit : Meme!
