@@ -139,7 +139,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
             }
             
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            //self.navigationController?.popToRootViewControllerAnimated(true)
         }
         
     }
@@ -220,7 +220,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
         }
         
-        
     }
         
     func keyboardWillHide(notification: NSNotification) {
@@ -229,7 +228,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             view.frame.origin.y += getKeyboardHeight(notification)
         
         }
-        
     
     }
     
@@ -256,7 +254,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         appDelegate.memes.append(meme)
         toolBar.hidden = true
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        //navigationController?.popToRootViewControllerAnimated(true)
+        self.performSegueWithIdentifier("goToTabBarController", sender: self)
         
     }
 
