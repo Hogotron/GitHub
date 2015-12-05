@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2CB4151C1353F300A8F978 /* search48.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2CB4121C1353F300A8F978 /* search48.png */; };
+		CF2CB4161C1353F300A8F978 /* search32.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2CB4131C1353F300A8F978 /* search32.png */; };
+		CF2CB4171C1353F300A8F978 /* search128.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2CB4141C1353F300A8F978 /* search128.png */; };
 		CFC041191C0E77F90043E8C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC041181C0E77F90043E8C5 /* AppDelegate.swift */; };
 		CFC0411B1C0E77F90043E8C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0411A1C0E77F90043E8C5 /* ViewController.swift */; };
 		CFC0411E1C0E77F90043E8C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC0411C1C0E77F90043E8C5 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF2CB4121C1353F300A8F978 /* search48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search48.png; sourceTree = "<group>"; };
+		CF2CB4131C1353F300A8F978 /* search32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search32.png; sourceTree = "<group>"; };
+		CF2CB4141C1353F300A8F978 /* search128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search128.png; sourceTree = "<group>"; };
 		CFC041151C0E77F80043E8C5 /* Flick Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flick Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC041181C0E77F90043E8C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC0411A1C0E77F90043E8C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF5FCEF51C13A08F000D828D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CF2CB4121C1353F300A8F978 /* search48.png */,
+				CF2CB4131C1353F300A8F978 /* search32.png */,
+				CF2CB4141C1353F300A8F978 /* search128.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		CFC0410C1C0E77F80043E8C5 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +117,7 @@
 				CFC0411A1C0E77F90043E8C5 /* ViewController.swift */,
 				CFC0411C1C0E77F90043E8C5 /* Main.storyboard */,
 				CFC0411F1C0E77F90043E8C5 /* Assets.xcassets */,
+				CF5FCEF51C13A08F000D828D /* Images */,
 				CFC041211C0E77F90043E8C5 /* LaunchScreen.storyboard */,
 				CFC041241C0E77F90043E8C5 /* Info.plist */,
 			);
@@ -233,6 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC041231C0E77F90043E8C5 /* LaunchScreen.storyboard in Resources */,
+				CF2CB4161C1353F300A8F978 /* search32.png in Resources */,
+				CF2CB4151C1353F300A8F978 /* search48.png in Resources */,
+				CF2CB4171C1353F300A8F978 /* search128.png in Resources */,
 				CFC041201C0E77F90043E8C5 /* Assets.xcassets in Resources */,
 				CFC0411E1C0E77F90043E8C5 /* Main.storyboard in Resources */,
 			);
@@ -485,6 +505,7 @@
 				CFC0413F1C0E77FA0043E8C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFC041401C0E77FA0043E8C5 /* Build configuration list for PBXNativeTarget "Flick FinderTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +514,7 @@
 				CFC041421C0E77FA0043E8C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFC041431C0E77FA0043E8C5 /* Build configuration list for PBXNativeTarget "Flick FinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +523,7 @@
 				CFC041451C0E77FA0043E8C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
