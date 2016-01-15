@@ -22,7 +22,7 @@ extension Client {
         static let FacebookId: String = "365362206864879"
         
         // MARK: URL
-        static let ParseBaseUrl: String = "https://api.parse.com/1/classes/"
+        static let ParseBaseURLSecure: String = "https://api.parse.com/1/classes/"
         static let UdacityBaseURLSecure: String = "https://www.udacity.com/api/"
     }
 

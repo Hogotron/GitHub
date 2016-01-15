@@ -85,6 +85,7 @@
 		3D3002361C42C66800B7A408 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3DE53A261C41E97D002CFD83 /* Constants.swift */,
 				3D3002371C42C68900B7A408 /* Students.swift */,
 			);
 			name = Model;
@@ -117,7 +118,6 @@
 				3D9B9C621C41BE68002E2B09 /* LoginViewController.swift */,
 				3DE53A241C41E8F6002CFD83 /* Client.swift */,
 				3D3002341C42C4FB00B7A408 /* MapViewController.swift */,
-				3DE53A261C41E97D002CFD83 /* Constants.swift */,
 				3D3002361C42C66800B7A408 /* Model */,
 				3D9B9C641C41BE68002E2B09 /* Main.storyboard */,
 				3D9B9C671C41BE68002E2B09 /* Assets.xcassets */,
