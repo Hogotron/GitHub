@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF2CB4151C1353F300A8F978 /* search48.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2CB4121C1353F300A8F978 /* search48.png */; };
-		CF2CB4161C1353F300A8F978 /* search32.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2CB4131C1353F300A8F978 /* search32.png */; };
-		CF2CB4171C1353F300A8F978 /* search128.png in Resources */ = {isa = PBXBuildFile; fileRef = CF2CB4141C1353F300A8F978 /* search128.png */; };
+		3D54592D1C4B15BE00DC8E86 /* search-icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D54592A1C4B15BE00DC8E86 /* search-icon-32.png */; };
+		3D54592E1C4B15BE00DC8E86 /* search-icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D54592B1C4B15BE00DC8E86 /* search-icon-48.png */; };
+		3D54592F1C4B15BE00DC8E86 /* search-icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D54592C1C4B15BE00DC8E86 /* search-icon-128.png */; };
 		CFC041191C0E77F90043E8C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC041181C0E77F90043E8C5 /* AppDelegate.swift */; };
 		CFC0411B1C0E77F90043E8C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0411A1C0E77F90043E8C5 /* ViewController.swift */; };
 		CFC0411E1C0E77F90043E8C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC0411C1C0E77F90043E8C5 /* Main.storyboard */; };
@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF2CB4121C1353F300A8F978 /* search48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search48.png; sourceTree = "<group>"; };
-		CF2CB4131C1353F300A8F978 /* search32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search32.png; sourceTree = "<group>"; };
-		CF2CB4141C1353F300A8F978 /* search128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search128.png; sourceTree = "<group>"; };
+		3D54592A1C4B15BE00DC8E86 /* search-icon-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-icon-32.png"; sourceTree = "<group>"; };
+		3D54592B1C4B15BE00DC8E86 /* search-icon-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-icon-48.png"; sourceTree = "<group>"; };
+		3D54592C1C4B15BE00DC8E86 /* search-icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-icon-128.png"; sourceTree = "<group>"; };
 		CFC041151C0E77F80043E8C5 /* Flick Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flick Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC041181C0E77F90043E8C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC0411A1C0E77F90043E8C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,9 +83,9 @@
 		CF5FCEF51C13A08F000D828D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CF2CB4121C1353F300A8F978 /* search48.png */,
-				CF2CB4131C1353F300A8F978 /* search32.png */,
-				CF2CB4141C1353F300A8F978 /* search128.png */,
+				3D54592A1C4B15BE00DC8E86 /* search-icon-32.png */,
+				3D54592B1C4B15BE00DC8E86 /* search-icon-48.png */,
+				3D54592C1C4B15BE00DC8E86 /* search-icon-128.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -249,12 +249,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D54592F1C4B15BE00DC8E86 /* search-icon-128.png in Resources */,
 				CFC041231C0E77F90043E8C5 /* LaunchScreen.storyboard in Resources */,
-				CF2CB4161C1353F300A8F978 /* search32.png in Resources */,
-				CF2CB4151C1353F300A8F978 /* search48.png in Resources */,
-				CF2CB4171C1353F300A8F978 /* search128.png in Resources */,
+				3D54592E1C4B15BE00DC8E86 /* search-icon-48.png in Resources */,
 				CFC041201C0E77F90043E8C5 /* Assets.xcassets in Resources */,
 				CFC0411E1C0E77F90043E8C5 /* Main.storyboard in Resources */,
+				3D54592D1C4B15BE00DC8E86 /* search-icon-32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

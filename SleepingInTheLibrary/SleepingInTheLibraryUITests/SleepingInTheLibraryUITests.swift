@@ -1,14 +1,14 @@
 //
-//  Flick_FinderUITests.swift
-//  Flick FinderUITests
+//  SleepingInTheLibraryUITests.swift
+//  SleepingInTheLibraryUITests
 //
-//  Created by Gaston Gasquet on 12/1/15.
-//  Copyright © 2015 Gaston Gasquet. All rights reserved.
+//  Created by Gaston Gasquet on 1/15/16.
+//  Copyright © 2016 Gaston Gasquet. All rights reserved.
 //
 
 import XCTest
 
-class Flick_FinderUITests: XCTestCase {
+class SleepingInTheLibraryUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

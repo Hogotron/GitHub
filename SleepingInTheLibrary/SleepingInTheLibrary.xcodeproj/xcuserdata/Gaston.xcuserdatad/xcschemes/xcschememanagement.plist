@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Flick Finder.xcscheme</key>
+		<key>SleepingInTheLibrary.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CFC041141C0E77F80043E8C5</key>
+		<key>3DD16D091C49BF3300523D2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CFC041281C0E77FA0043E8C5</key>
+		<key>3DD16D1D1C49BF3300523D2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CFC041331C0E77FA0043E8C5</key>
+		<key>3DD16D281C49BF3300523D2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
