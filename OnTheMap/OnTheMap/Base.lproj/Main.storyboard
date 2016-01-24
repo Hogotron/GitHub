@@ -240,6 +240,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="emailTextField" destination="iEK-RZ-fsK" id="Kub-jk-Cwy"/>
+                        <outlet property="loginButton" destination="2EJ-L8-Fa1" id="Gle-eg-Sz1"/>
                         <outlet property="passwordTextField" destination="UHH-hW-TIs" id="v0m-yu-HJJ"/>
                         <segue destination="QrL-wd-fXx" kind="presentation" id="cXH-Ji-bd7"/>
                     </connections>

@@ -13,6 +13,13 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
+    //MARK: -- Properties
+    var appDelegate: AppDelegate!
     
     @IBOutlet weak var mapview: MKMapView!
+
+
+    
+
+
 }
