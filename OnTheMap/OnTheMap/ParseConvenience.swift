@@ -13,7 +13,7 @@ import UIKit
 extension ParseClient {
     
     //MARK: -- Function GETs the last 100 student locations created
-    func getStudentLocations(completionHandler: (result: [[String:AnyObject]]?, error: NSError?) -> Void){
+ /*   func getStudentLocations(completionHandler: (result: [[String:AnyObject]]?, error: NSError?) -> Void){
         
         taskForGetMethod(Methods.StudentLocation, parameters: nil) {(JSONResult, error) in
             
@@ -90,4 +90,5 @@ extension ParseClient {
         }
     }
     
+}*/
 }

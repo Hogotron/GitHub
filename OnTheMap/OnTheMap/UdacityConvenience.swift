@@ -21,7 +21,7 @@ extension UdacityClient{
             ],
         ]
         
-        taskForPostMethod(method, jsonBody: jsonBody) { (JSONResult, error) in
+     /*   taskForPostMethod(method, jsonBody: jsonBody) { (JSONResult, error) in
             
             guard error == nil else {
                 completionHandler(result: nil, error: error)
@@ -62,7 +62,7 @@ extension UdacityClient{
                 completionHandler(result: nil, error: NSError(domain: "deleteSession", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not delete session"]))
             }
         }
-    }
+    } */
     
     //MARK: -- Function that GETs user information
     func getUserData(userID: String, completionHandler: (result: [String]?, error: NSError?) -> Void) {
@@ -93,4 +93,5 @@ extension UdacityClient{
             }
         }
     }
+}
 }
