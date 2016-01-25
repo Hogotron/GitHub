@@ -72,7 +72,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 return
             }
     }
-      //  self.appDelegate.userID = result!
+        
+        
+    //  self.appDelegate.userID = result!
         
         dispatch_async(dispatch_get_main_queue(),{
             
@@ -86,19 +88,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         })
     }
 
+    @IBAction func signUpButton(sender: UIButton) {
+    
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.udacity.com/account/auth#!/signin")!)
+    }
+    
+    
     func hideNavigationBar() {
         navigationController?.navigationBar.hidden = true
     }
 
     func enableButtons(sender:UIButton) {
         loginButton.enabled = true
-        //signUpButton.enabled = true
+        signUpButton.enabled = true
         sender.alpha = 1.0
     }
 
     func disableButtons(sender: UIButton) {
         loginButton.enabled = true
-        //signUpButton.enabled = true
+        signUpButton.enabled = true
         sender.alpha = 1.0
     }
 
