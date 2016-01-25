@@ -13,7 +13,7 @@ extension UdacityClient {
     
     //MARK: -- Constants
     struct Constants{
-        static let UdacityBaseSecureURL: String = "https://www.udacity.com/api/"
+        static let UdacityBaseURL: String = "https://www.udacity.com/api/"
     }
     
     //MARK: -- Methods

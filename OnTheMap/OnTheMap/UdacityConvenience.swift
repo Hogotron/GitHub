@@ -21,7 +21,7 @@ extension UdacityClient{
             ],
         ]
         
-     /*   taskForPostMethod(method, jsonBody: jsonBody) { (JSONResult, error) in
+        taskForPostMethod(method, jsonBody: jsonBody) { (JSONResult, error) in
             
             guard error == nil else {
                 completionHandler(result: nil, error: error)
@@ -42,7 +42,7 @@ extension UdacityClient{
     }
     
     //MARK: -- Function that DELETEs the current session
-    func deleteSession(completionHandler: (result: AnyObject?, error: NSError?) -> Void) {
+  /*  func deleteSession(completionHandler: (result: AnyObject?, error: NSError?) -> Void) {
         let method = Methods.Session
         
         taskForDeleteMethod(method) {(JSONResult, error) in
@@ -94,4 +94,4 @@ extension UdacityClient{
         }
     }
 }
-}
+//}
