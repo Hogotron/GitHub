@@ -45,6 +45,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     /* Actions */
     @IBAction func loginButton(sender: UIButton) {
     
+        if ((emailTextField.text!.isEmpty) || (passwordTextField.text!.isEmpty)) {
+            showAlert("Empty Email or Password")
+        } else {
+            let emailText = emailTextField.text!
+            let passwordText = passwordTextField.text!
+        }
+        
         disableButtons(sender)
         
         /* Show the app is processing data */
@@ -53,13 +60,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         activityView.startAnimating()
         view.addSubview(activityView)
         
-        UdacityClient.sharedInstance().postSession(emailTextField.text!, password: passwordTextField.text!) {(result, ErrorType) in
+        
+        
+        UdacityClient.sharedInstance().postSession(emailTextField.text!, password: passwordTextField.text!) {(result, error) in
           
+            dispatch_async(dispatch_get_main_queue(),{
+                
+                /* Displayed the tabbed view controller */
+                let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
+                self.presentViewController(tabViewController, animated: true, completion: nil)
+                
+            
+                /* Stop animating */
+                self.enableButtons(sender)
+                activityView.stopAnimating()
+            })
+            
             /* Guard: was there an error? */
-            guard ErrorType == nil else {
+            guard error == nil else {
                 
                 /* Check to see what type of error */
-                if let errorString = ErrorType?.userInfo[NSLocalizedDescriptionKey] as? String {
+                if let errorString = error?.userInfo[NSLocalizedDescriptionKey] as? String {
                     
                     /* Display an alert and shake the view */
                     dispatch_async(dispatch_get_main_queue(), {
@@ -76,7 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     //  self.appDelegate.userID = result!
         
-        dispatch_async(dispatch_get_main_queue(),{
+     /*   dispatch_async(dispatch_get_main_queue(),{
             
             /* Displayed the tabbed view controller */
             let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
@@ -85,9 +106,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             /* Stop animating */
             self.enableButtons(sender)
             activityView.stopAnimating()
+        }) */
+    }
+
+    func showAlert(error: String) {
+        dispatch_async(dispatch_get_main_queue(), {
+
+            let alert = UIAlertController(title: "", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         })
     }
 
+    
     @IBAction func signUpButton(sender: UIButton) {
     
         UIApplication.sharedApplication().openURL(NSURL(string: "https://www.udacity.com/account/auth#!/signin")!)

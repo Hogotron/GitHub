@@ -33,11 +33,11 @@ class UdacityClient: NSObject {
         let request = NSMutableURLRequest(URL: url!)
         
         /* Make the request */
-        let task = session.dataTaskWithRequest(request) {(data, response, ErrorType) in
+        let task = session.dataTaskWithRequest(request) {(data, response, error) in
             
             /* GUARD: Was there an error */
-            guard ErrorType == nil else {
-                let userInfo = [NSLocalizedDescriptionKey: "There was an error with your request: \(ErrorType)"]
+            guard error == nil else {
+                let userInfo = [NSLocalizedDescriptionKey: "There was an error with your request: \(error)"]
                 completionHandler(result: nil, error: NSError(domain: "taskForGetMethod", code: 1, userInfo: userInfo))
                 return
             }
