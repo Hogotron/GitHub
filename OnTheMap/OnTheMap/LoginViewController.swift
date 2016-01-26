@@ -86,7 +86,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     dispatch_async(dispatch_get_main_queue(), {
                         
                         self.showAuthenticationAlert(errorString)
-                        self.shakeScreen()
+                        //self.shakeScreen()
                         activityView.stopAnimating()
                     })
                 }
@@ -116,6 +116,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         })
+            shakeScreen()
     }
 
     
