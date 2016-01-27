@@ -45,80 +45,54 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     /* Actions */
     @IBAction func loginButton(sender: UIButton) {
     
-        if ((emailTextField.text!.isEmpty) || (passwordTextField.text!.isEmpty)) {
-            showAlert("Empty Email or Password")
-        } else {
-            let emailText = emailTextField.text!
-            let passwordText = passwordTextField.text!
-        }
         
-        disableButtons(sender)
-        
-        /* Show the app is processing data */
-        let activityView = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
-        activityView.center = view.center
+        let activityView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+        activityView.center = self.view.center
         activityView.startAnimating()
-        view.addSubview(activityView)
+        self.view.addSubview(activityView)
         
-        
-        
-        UdacityClient.sharedInstance().postSession(emailTextField.text!, password: passwordTextField.text!) {(result, error) in
-          
-            dispatch_async(dispatch_get_main_queue(),{
-                
-                /* Displayed the tabbed view controller */
-                let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
-                self.presentViewController(tabViewController, animated: true, completion: nil)
-                
+        UdacityClient.sharedInstance().postSession(emailTextField.text!, password: passwordTextField.text!) { (sessionID, error) in
             
-                /* Stop animating */
-                self.enableButtons(sender)
-                activityView.stopAnimating()
-            })
-            
-            /* Guard: was there an error? */
-            guard error == nil else {
+            if let sessionID = sessionID {
                 
-                /* Check to see what type of error */
-                if let errorString = error?.userInfo[NSLocalizedDescriptionKey] as? String {
-                    
-                    /* Display an alert and shake the view */
-                    dispatch_async(dispatch_get_main_queue(), {
-                        
-                        self.showAuthenticationAlert(errorString)
-                        //self.shakeScreen()
-                        activityView.stopAnimating()
-                    })
+                dispatch_async(dispatch_get_main_queue(), {
+                    activityView.stopAnimating()
+                    activityView.removeFromSuperview()
+                })
+                print("Successful login for Session \(sessionID)")
+                UdacityClient.sharedInstance().sessionID = sessionID
+                self.completeLogin()
+                
+            } else {
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    activityView.stopAnimating()
+                    activityView.removeFromSuperview()
+                })
+                let alert = UIAlertController(title: "Error", message: "Invalid login or password", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+                if let error = error {
+                    print("Login failure due to error: \(error)")
+                } else {
+                    print("Login failure - no session ID or error returned")
                 }
-                return
             }
-    }
-        
-        
-    //  self.appDelegate.userID = result!
-        
-     /*   dispatch_async(dispatch_get_main_queue(),{
             
-            /* Displayed the tabbed view controller */
+            
+        }
+        shakeScreen()
+        
+    }
+
+    func completeLogin() {
+        dispatch_async(dispatch_get_main_queue(), {
+            
             let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
             self.presentViewController(tabViewController, animated: true, completion: nil)
-            
-            /* Stop animating */
-            self.enableButtons(sender)
-            activityView.stopAnimating()
-        }) */
-    }
-
-    func showAlert(error: String) {
-        dispatch_async(dispatch_get_main_queue(), {
-
-            let alert = UIAlertController(title: "", message: error, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
         })
-            shakeScreen()
     }
-
     
     @IBAction func signUpButton(sender: UIButton) {
     
