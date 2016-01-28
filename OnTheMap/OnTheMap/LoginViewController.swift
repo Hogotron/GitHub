@@ -89,7 +89,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func completeLogin() {
         dispatch_async(dispatch_get_main_queue(), {
             
-            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MapViewController")
             self.presentViewController(tabViewController, animated: true, completion: nil)
         })
     }
