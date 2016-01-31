@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension UdacityClient{
+extension UdacityClient {
     
     //MARK: -- Function that POSTs new session
     func postSession(username: String, password: String, completionHandler: (result: String?, error: NSError?) -> Void){
@@ -42,7 +42,7 @@ extension UdacityClient{
     }
     
     //MARK: -- Function that DELETEs the current session
-  /*  func deleteSession(completionHandler: (result: AnyObject?, error: NSError?) -> Void) {
+    func deleteSession(completionHandler: (result: AnyObject?, error: NSError?) -> Void) {
         let method = Methods.Session
         
         taskForDeleteMethod(method) {(JSONResult, error) in
@@ -62,7 +62,7 @@ extension UdacityClient{
                 completionHandler(result: nil, error: NSError(domain: "deleteSession", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not delete session"]))
             }
         }
-    } */
+    }
     
     //MARK: -- Function that GETs user information
     func getUserData(userID: String, completionHandler: (result: [String]?, error: NSError?) -> Void) {
@@ -94,4 +94,4 @@ extension UdacityClient{
         }
     }
 }
-//}
+

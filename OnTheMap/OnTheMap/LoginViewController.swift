@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet var mainView: UIView!
+    @IBOutlet weak var facebookLoginButton: UIButton!
     
     /* View lifecycle functions */
     override func viewDidLoad() {
@@ -66,30 +67,36 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             } else {
                 
                 dispatch_async(dispatch_get_main_queue(), {
+                    self.shakeScreen()
                     activityView.stopAnimating()
                     activityView.removeFromSuperview()
+                    let alert = UIAlertController(title: "Error", message: "Invalid login or password", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
                 })
-                let alert = UIAlertController(title: "Error", message: "Invalid login or password", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-                
                 if let error = error {
+               
                     print("Login failure due to error: \(error)")
+
+                
                 } else {
                     print("Login failure - no session ID or error returned")
+                
+                    
                 }
+               
             }
             
             
         }
-        shakeScreen()
+        
         
     }
 
     func completeLogin() {
         dispatch_async(dispatch_get_main_queue(), {
             
-            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MapViewController")
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
             self.presentViewController(tabViewController, animated: true, completion: nil)
         })
     }

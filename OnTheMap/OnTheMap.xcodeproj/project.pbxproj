@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2529CA1C5D5C7F0022BB08 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2529C71C5D5C7F0022BB08 /* Bolts.framework */; };
+		3D2529CB1C5D5C7F0022BB08 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2529C81C5D5C7F0022BB08 /* FBSDKCoreKit.framework */; };
+		3D2529CC1C5D5C7F0022BB08 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2529C91C5D5C7F0022BB08 /* FBSDKLoginKit.framework */; };
+		3D2529CE1C5D8A1C0022BB08 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2529CD1C5D8A1C0022BB08 /* StudentTableViewController.swift */; };
 		3D3002351C42C4FB00B7A408 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3002341C42C4FB00B7A408 /* MapViewController.swift */; };
 		3D3002381C42C68900B7A408 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3002371C42C68900B7A408 /* StudentInformation.swift */; };
 		3D9B9C611C41BE68002E2B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B9C601C41BE68002E2B09 /* AppDelegate.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D2529C71C5D5C7F0022BB08 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = OnTheMap/Bolts.framework; sourceTree = "<group>"; };
+		3D2529C81C5D5C7F0022BB08 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = OnTheMap/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		3D2529C91C5D5C7F0022BB08 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = OnTheMap/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		3D2529CD1C5D8A1C0022BB08 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		3D3002341C42C4FB00B7A408 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3D3002371C42C68900B7A408 /* StudentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
 		3D9B9C5D1C41BE68002E2B09 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2529CA1C5D5C7F0022BB08 /* Bolts.framework in Frameworks */,
+				3D2529CB1C5D5C7F0022BB08 /* FBSDKCoreKit.framework in Frameworks */,
+				3D2529CC1C5D5C7F0022BB08 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +113,9 @@
 		3D9B9C541C41BE68002E2B09 = {
 			isa = PBXGroup;
 			children = (
+				3D2529C71C5D5C7F0022BB08 /* Bolts.framework */,
+				3D2529C81C5D5C7F0022BB08 /* FBSDKCoreKit.framework */,
+				3D2529C91C5D5C7F0022BB08 /* FBSDKLoginKit.framework */,
 				3D9B9C5F1C41BE68002E2B09 /* OnTheMap */,
 				3D9B9C741C41BE68002E2B09 /* OnTheMapTests */,
 				3D9B9C7F1C41BE68002E2B09 /* OnTheMapUITests */,
@@ -155,6 +169,7 @@
 			children = (
 				3D3002341C42C4FB00B7A408 /* MapViewController.swift */,
 				3DAEAD3E1C5579CE00B53C7F /* LoginViewController.swift */,
+				3D2529CD1C5D8A1C0022BB08 /* StudentTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +340,7 @@
 				3DAEAD3D1C554D4200B53C7F /* ParseConvenience.swift in Sources */,
 				3DAEAD3F1C5579CE00B53C7F /* LoginViewController.swift in Sources */,
 				3DAEAD3A1C554D2300B53C7F /* ParseConstants.swift in Sources */,
+				3D2529CE1C5D8A1C0022BB08 /* StudentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +480,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnTheMap",
+				);
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gasqui.OnTheMap;
@@ -475,6 +495,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnTheMap",
+				);
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gasqui.OnTheMap;
