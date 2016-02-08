@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -312,7 +312,7 @@
         <scene sceneID="fMU-d6-L5z">
             <objects>
                 <navigationController id="ogp-ln-bJJ" userLabel="List" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XfO-h5-v0Z"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="list" id="XfO-h5-v0Z"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2yk-ja-azB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -384,7 +384,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="QiY-S1-NLe"/>
+                    <navigationItem key="navigationItem" id="QiY-S1-NLe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="YkV-hu-BZT">
+                            <connections>
+                                <action selector="loadStudentInformation:" destination="LG4-Wb-qCD" id="nF3-hh-6CH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -413,6 +419,7 @@
                     <navigationItem key="navigationItem" id="7GZ-f6-yvg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="mapView" destination="fKK-uu-9pi" id="KOu-u0-3bi"/>
                         <outlet property="mapview" destination="fKK-uu-9pi" id="Dfy-zF-Wlc"/>
                     </connections>
                 </viewController>
@@ -424,7 +431,7 @@
         <scene sceneID="Fpk-b7-hqB">
             <objects>
                 <navigationController id="pJE-Un-cwK" userLabel="Map" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5eQ-IX-zSd"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="map" id="5eQ-IX-zSd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8qM-IS-nXp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -440,6 +447,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list" width="32" height="32"/>
+        <image name="map" width="32" height="32"/>
         <image name="pin" width="32" height="32"/>
         <image name="udacity" width="256" height="256"/>
     </resources>
