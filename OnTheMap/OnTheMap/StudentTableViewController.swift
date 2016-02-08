@@ -12,6 +12,7 @@ import UIKit
 class StudentTableViewController: UITableViewController {
     
     
+    
     //MARK: -- Properties
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -166,7 +167,7 @@ class StudentTableViewController: UITableViewController {
     }
     
     //Function that opens a webpage when a row is clicked
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let app = UIApplication.sharedApplication()
         
         if let cell = tableView.cellForRowAtIndexPath(indexPath){
