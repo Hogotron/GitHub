@@ -18,15 +18,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     //MARK: -- Outlets
     @IBOutlet weak var mapView: MKMapView!
     
-    //MARK: -- Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-    
-}
-
+    }
 
 
 }

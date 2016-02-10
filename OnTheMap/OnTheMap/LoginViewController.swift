@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate {
     
     var session: NSURLSession!
     var appDelegate: AppDelegate!
