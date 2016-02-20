@@ -18,7 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var facebookLoginButton: UIButton!
     
     /* View lifecycle functions */
