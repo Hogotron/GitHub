@@ -13,6 +13,8 @@
 		3D2529CE1C5D8A1C0022BB08 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2529CD1C5D8A1C0022BB08 /* StudentTableViewController.swift */; };
 		3D3002351C42C4FB00B7A408 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3002341C42C4FB00B7A408 /* MapViewController.swift */; };
 		3D3002381C42C68900B7A408 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3002371C42C68900B7A408 /* StudentInformation.swift */; };
+		3D6C4CA91C79211C0000F851 /* InformationPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6C4CA81C79211C0000F851 /* InformationPostingViewController.swift */; };
+		3D6F0D5D1C7A05F100CD14C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6F0D5C1C7A05F100CD14C3 /* MapKit.framework */; };
 		3D9B9C611C41BE68002E2B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9B9C601C41BE68002E2B09 /* AppDelegate.swift */; };
 		3D9B9C661C41BE68002E2B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9B9C641C41BE68002E2B09 /* Main.storyboard */; };
 		3D9B9C681C41BE68002E2B09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9B9C671C41BE68002E2B09 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		3D2529CD1C5D8A1C0022BB08 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		3D3002341C42C4FB00B7A408 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3D3002371C42C68900B7A408 /* StudentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		3D6C4CA81C79211C0000F851 /* InformationPostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPostingViewController.swift; sourceTree = "<group>"; };
+		3D6F0D5C1C7A05F100CD14C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3D9B9C5D1C41BE68002E2B09 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9B9C601C41BE68002E2B09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D9B9C651C41BE68002E2B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			files = (
 				3D2529CA1C5D5C7F0022BB08 /* Bolts.framework in Frameworks */,
 				3D2529CB1C5D5C7F0022BB08 /* FBSDKCoreKit.framework in Frameworks */,
+				3D6F0D5D1C7A05F100CD14C3 /* MapKit.framework in Frameworks */,
 				3D2529CC1C5D5C7F0022BB08 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +118,7 @@
 		3D9B9C541C41BE68002E2B09 = {
 			isa = PBXGroup;
 			children = (
+				3D6F0D5C1C7A05F100CD14C3 /* MapKit.framework */,
 				3D2529C71C5D5C7F0022BB08 /* Bolts.framework */,
 				3D2529C81C5D5C7F0022BB08 /* FBSDKCoreKit.framework */,
 				3D2529C91C5D5C7F0022BB08 /* FBSDKLoginKit.framework */,
@@ -168,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				3D3002341C42C4FB00B7A408 /* MapViewController.swift */,
+				3D6C4CA81C79211C0000F851 /* InformationPostingViewController.swift */,
 				3DAEAD3E1C5579CE00B53C7F /* LoginViewController.swift */,
 				3D2529CD1C5D8A1C0022BB08 /* StudentTableViewController.swift */,
 			);
@@ -265,6 +272,11 @@
 					3D9B9C5C1C41BE68002E2B09 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = UA384SMKXM;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3D9B9C701C41BE68002E2B09 = {
 						CreatedOnToolsVersion = 7.2;
@@ -336,6 +348,7 @@
 				3D9B9C611C41BE68002E2B09 /* AppDelegate.swift in Sources */,
 				3D3002381C42C68900B7A408 /* StudentInformation.swift in Sources */,
 				3D3002351C42C4FB00B7A408 /* MapViewController.swift in Sources */,
+				3D6C4CA91C79211C0000F851 /* InformationPostingViewController.swift in Sources */,
 				3DAEAD361C554D0000B53C7F /* UdacityConvenience.swift in Sources */,
 				3DAEAD3D1C554D4200B53C7F /* ParseConvenience.swift in Sources */,
 				3DAEAD3F1C5579CE00B53C7F /* LoginViewController.swift in Sources */,

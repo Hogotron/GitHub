@@ -438,6 +438,92 @@
             </objects>
             <point key="canvasLocation" x="1482" y="37"/>
         </scene>
+        <!--Information Posting View Controller-->
+        <scene sceneID="F8a-lD-ZOe">
+            <objects>
+                <viewController id="daA-70-GNj" customClass="InformationPostingViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vJw-lB-6Fb"/>
+                        <viewControllerLayoutGuide type="bottom" id="KWf-YE-Rdn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vwh-GS-RRC" userLabel="Location view">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Au-8a-Hec" userLabel="Cancel Button">
+                                <rect key="frame" x="526" y="28" width="54" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.018145849870000001" green="0.24628265460000001" blue="0.3719161184" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="daA-70-GNj" eventType="touchUpInside" id="F6J-Ow-crj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where are you studying                today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEw-yG-6ka">
+                                <rect key="frame" x="181" y="53" width="238" height="142"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.018145849870000001" green="0.24628265460000001" blue="0.3719161184" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qe7-Eh-Eo1" userLabel="Location Prompt">
+                                <rect key="frame" x="0.0" y="187" width="600" height="302"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter you location here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddQ-ff-7ST">
+                                        <rect key="frame" x="8" y="8" width="584" height="35"/>
+                                        <color key="backgroundColor" red="0.018145849870000001" green="0.24628265460000001" blue="0.3719161184" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.018145849870000001" green="0.24628265460000001" blue="0.3719161184" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q65-qs-acS" userLabel="Find on the Map Button">
+                                <rect key="frame" x="161" y="267" width="278" height="67"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Find on the Map"/>
+                                <connections>
+                                    <action selector="findOnTheMap:" destination="daA-70-GNj" eventType="touchUpInside" id="W8g-GX-hJH"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ACp-aA-UDV">
+                                <rect key="frame" x="0.0" y="74" width="600" height="452"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmq-8h-OFt" userLabel="Submit Button">
+                                <rect key="frame" x="20" y="28" width="49" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.018145849870000001" green="0.24628265460000001" blue="0.3719161184" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitStudentLocation:" destination="daA-70-GNj" eventType="touchUpInside" id="Esc-0u-eUl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Na3-9S-CMJ" userLabel="Url Text Field">
+                                <rect key="frame" x="251" y="285" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uB5-hY-ZYI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="7Au-8a-Hec" id="Tud-bd-Bey"/>
+                        <outlet property="findOnTheMapButton" destination="q65-qs-acS" id="2yL-6f-In9"/>
+                        <outlet property="locationPromptView" destination="vwh-GS-RRC" id="EDu-oY-e6y"/>
+                        <outlet property="locationTextField" destination="ddQ-ff-7ST" id="OF3-zY-NLt"/>
+                        <outlet property="mapView" destination="ACp-aA-UDV" id="e90-TT-hQS"/>
+                        <outlet property="studyingLabel" destination="qEw-yG-6ka" id="Obr-8a-6RH"/>
+                        <outlet property="submitButton" destination="vmq-8h-OFt" id="SL1-EM-EAF"/>
+                        <outlet property="urlTextField" destination="Na3-9S-CMJ" id="2dT-oS-cU3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8k8-AH-Rvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2400" y="741"/>
+        </scene>
     </scenes>
     <resources>
         <image name="list" width="32" height="32"/>

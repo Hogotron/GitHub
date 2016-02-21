@@ -59,7 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     //Function that is called when the loout button is pressed
-    func logOut() {
+  /*  func logOut() {
         UdacityClient.sharedInstance().deleteSession() {(result, error) in
             
             guard error == nil else {
@@ -76,7 +76,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         /* Show the log in view controller */
         navigationController!.popToRootViewControllerAnimated(true)
-    }
+    } */
     
     //MARK: -- Helper functions
     
