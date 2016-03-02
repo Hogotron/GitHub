@@ -46,7 +46,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     /* Actions */
     @IBAction func loginButton(sender: UIButton) {
     
-        
         let activityView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
         activityView.center = self.view.center
         activityView.startAnimating()

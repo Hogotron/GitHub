@@ -13,6 +13,7 @@ extension UdacityClient {
     
     //MARK: -- Function that POSTs new session
     func postSession(username: String, password: String, completionHandler: (result: String?, error: NSError?) -> Void){
+        
         let method = Methods.Session
         let jsonBody = [
             JSONBodyKeys.Udacity : [
@@ -79,7 +80,7 @@ extension UdacityClient {
                 /* Array for user name */
                 var result = [String]()
                 
-                if let firstName = dictionary[JSONResponseKeys.FirstName] as? String{
+                if let firstName = dictionary[JSONResponseKeys.FirstName] as? String {
                     result.append(firstName)
                     if let lastName = dictionary[JSONResponseKeys.LastName] as? String {
                         result.append(lastName)

@@ -59,7 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     //Function that is called when the loout button is pressed
-  /*  func logOut() {
+    func logOut() {
         UdacityClient.sharedInstance().deleteSession() {(result, error) in
             
             guard error == nil else {
@@ -76,14 +76,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         /* Show the log in view controller */
         navigationController!.popToRootViewControllerAnimated(true)
-    } */
+    } 
     
     //MARK: -- Helper functions
     
     //Function that gets the user data
     func getUserData(){
+        
         /* GET the users first and last name */
-        UdacityClient.sharedInstance().getUserData(appDelegate.userID) {(result, error) in
+        UdacityClient.sharedInstance().getUserData(UdacityClient.sharedInstance().sessionID!) {(result, error) in
             
             guard error == nil else {
                 let alertTitle = "Couldn't get your data"
