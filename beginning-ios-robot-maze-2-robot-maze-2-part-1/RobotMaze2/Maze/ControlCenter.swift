@@ -18,18 +18,14 @@ class ControlCenter {
         isFacingWall(myRobot, direction: myRobot.direction)
         
         if robotIsBlocked {
-             myRobot.rotateRight()
-         
-        } else {
-             myRobot.move()
-         }
-        
-        if robotIsBlocked {
             randomlyRotateRightOrLeft(myRobot)
+        }
         
-        } else {
+        else
+             {
             continueStraightOrRotate(myRobot)
         }
+        
     }
         
     func previousMoveIsFinished(robot: ComplexRobotObject) {
