@@ -14,7 +14,7 @@ class ControlCenter {
     func moveComplexRobot(myRobot: ComplexRobotObject) {
         
         let robotIsBlocked = isFacingWall(myRobot, direction: myRobot.direction)
-        
+        let myWallInfo = checkWalls(myRobot)
         isFacingWall(myRobot, direction: myRobot.direction)
         
         if robotIsBlocked {
