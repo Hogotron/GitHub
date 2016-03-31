@@ -38,8 +38,10 @@ extension ControlCenter {
     }
 
     func checkWalls(robot:ComplexRobotObject) -> (up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int) {
+        
         var numberOfWalls = 0
         let cell = mazeController.currentCell(robot)
+        
         
         // Check if there is a wall at the top of the current cell
         let isWallUp = cell.top
@@ -62,8 +64,9 @@ extension ControlCenter {
         if isWallLeft {
             numberOfWalls++
         }
-        print(isWallUp, isWallRight, isWallBottom, isWallLeft, 0)
-        return (isWallUp, isWallRight, isWallBottom, isWallLeft, 0)
+        print(isWallUp, isWallRight, isWallBottom, isWallLeft, numberOfWalls)
+        
+        return (isWallUp, isWallRight, isWallBottom, isWallLeft, numberOfWalls)
         
     }
 }
