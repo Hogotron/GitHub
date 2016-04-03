@@ -42,14 +42,11 @@ extension ControlCenter {
         var numberOfWalls = 0
         let cell = mazeController.currentCell(robot)
         
-        
-        // Check if there is a wall at the top of the current cell
         let isWallUp = cell.top
         if isWallUp {
             numberOfWalls++
         }
         
-        // Check if there is a wall to the right of the current cell
         let isWallRight = cell.right
         if isWallRight {
             numberOfWalls++

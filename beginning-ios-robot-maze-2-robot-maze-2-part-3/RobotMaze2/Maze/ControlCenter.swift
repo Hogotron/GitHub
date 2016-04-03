@@ -20,14 +20,12 @@ class ControlCenter {
         let isTwoWayPath = (myWallInfo.numberOfWalls == 2)
         let isDeadEnd = (myWallInfo.numberOfWalls == 3)
         
-        if robotIsBlocked {
+       /* if robotIsBlocked {
             randomlyRotateRightOrLeft(myRobot)
-        }
-            
-        else {
-            
+        
+        } else {
             continueStraightOrRotate(myRobot)
-        }
+        } */
         
         print(isDeadEnd)
         print(isTwoWayPath)
@@ -37,25 +35,25 @@ class ControlCenter {
             randomlyRotateRightOrLeft(myRobot)
         }
         
-        if isThreeWayJunction && !robotIsBlocked {
-            continueStraightOrRotate(myRobot)
+        else if isThreeWayJunction && !robotIsBlocked {
+            turnTowardClearPath(myRobot, wallInfo: myWallInfo)
         }
         
-        if isTwoWayPath && !robotIsBlocked {
-            myRobot.move()
+        else if isTwoWayPath && !robotIsBlocked {
+            
         }
         
-        if isTwoWayPath && robotIsBlocked {
+        else if isTwoWayPath && robotIsBlocked {
             turnTowardClearPath(myRobot, wallInfo:  myWallInfo)
             
         }
         
-        if isDeadEnd && !robotIsBlocked {
-            myRobot.move()
+        else if isDeadEnd && robotIsBlocked {
+            myRobot.rotateRight()
         }
         
-        if isDeadEnd && robotIsBlocked {
-            myRobot.rotateRight()
+        else  {
+            myRobot.move()
         }
         
     }
@@ -65,3 +63,6 @@ class ControlCenter {
     }
     
 }
+
+
+

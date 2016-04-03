@@ -10,10 +10,10 @@ import Foundation
 
 extension ControlCenter {
     
+    
     func randomlyRotateRightOrLeft(robot: ComplexRobotObject) {
+        
         let randomNumber = arc4random() % 2
-        func randomlyRotateRightOrLeft(robot: ComplexRobotObject) {
-            let randomNumber = arc4random() % 2
             
             if randomNumber == 0 {
                 robot.rotateLeft()
@@ -24,9 +24,9 @@ extension ControlCenter {
             
         }
         
-        func continueStraightOrRotate(robot: ComplexRobotObject, wallInfo: (up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int)) {
+    func continueStraightOrRotate(robot: ComplexRobotObject, wallInfo:(up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int))  {
         
-        let randomNumber = arc4random() % 2
+            let randomNumber = arc4random() % 2
             
             if randomNumber == 0 {
                 robot.move()
@@ -61,4 +61,3 @@ extension ControlCenter {
     }
     
 
-}
