@@ -36,11 +36,11 @@ class ControlCenter {
         }
         
         else if isThreeWayJunction && !robotIsBlocked {
-            turnTowardClearPath(myRobot, wallInfo: myWallInfo)
+            continueStraightOrRotate(myRobot, wallInfo: myWallInfo)
         }
         
         else if isTwoWayPath && !robotIsBlocked {
-            
+            continueStraightOrRotate(myRobot, wallInfo: myWallInfo)
         }
         
         else if isTwoWayPath && robotIsBlocked {
