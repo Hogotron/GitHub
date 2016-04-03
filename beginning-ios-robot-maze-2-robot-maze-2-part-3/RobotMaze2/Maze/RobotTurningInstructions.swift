@@ -24,7 +24,7 @@ extension ControlCenter {
             
         }
         
-    func continueStraightOrRotate(robot: ComplexRobotObject) {
+        func continueStraightOrRotate(robot: ComplexRobotObject, wallInfo: (up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int)) {
         
         let randomNumber = arc4random() % 2
             
@@ -32,7 +32,7 @@ extension ControlCenter {
                 robot.move()
                 
             } else {
-                randomlyRotateRightOrLeft(robot)
+                turnTowardClearPath(robot, wallInfo:  wallInfo)
             }
             
         }

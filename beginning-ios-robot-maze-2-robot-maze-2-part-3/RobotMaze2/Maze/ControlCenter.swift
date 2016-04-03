@@ -15,6 +15,10 @@ class ControlCenter {
         
         let robotIsBlocked = isFacingWall(myRobot, direction: myRobot.direction)
         isFacingWall(myRobot, direction: myRobot.direction)
+        let myWallInfo = checkWalls(myRobot)
+        let isThreeWayJunction = (myWallInfo.numberOfWalls == 1)
+        let isTwoWayPath = (myWallInfo.numberOfWalls == 2)
+        let isDeadEnd = (myWallInfo.numberOfWalls == 3)
         
         if robotIsBlocked {
             randomlyRotateRightOrLeft(myRobot)
@@ -24,11 +28,6 @@ class ControlCenter {
             
             continueStraightOrRotate(myRobot)
         }
-        
-        let myWallInfo = checkWalls(myRobot)
-        let isThreeWayJunction = (myWallInfo.numberOfWalls == 1)
-        let isTwoWayPath = (myWallInfo.numberOfWalls == 2)
-        let isDeadEnd = (myWallInfo.numberOfWalls == 3)
         
         print(isDeadEnd)
         print(isTwoWayPath)
@@ -47,7 +46,8 @@ class ControlCenter {
         }
         
         if isTwoWayPath && robotIsBlocked {
-            randomlyRotateRightOrLeft(myRobot)
+            turnTowardClearPath(myRobot, wallInfo:  myWallInfo)
+            
         }
         
         if isDeadEnd && !robotIsBlocked {
