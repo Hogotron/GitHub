@@ -18,7 +18,7 @@ struct Settings {
         static let GameDataURL = NSBundle.mainBundle().URLForResource("GameData", withExtension: "plist")!
         static let Font = "Superclarendon-Italic"
         static let FontColor = UIColor.whiteColor()
-        static var Level = 0
+        static var Level = 1
         static var ShowBadges = false
         static var RequestsToSkip = 0
     }
